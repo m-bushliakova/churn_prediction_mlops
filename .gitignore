@@ -1,0 +1,9 @@
+.env
+model_api/__pycache__
+__pycache__
+mlruns
+mlflow.db
+experiments/
+data
+.vscode
+
