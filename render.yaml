@@ -1,6 +1,7 @@
 services:
   - type: web
     name: mlflow-server
+    runtime: docker
     dockerfilePath: ./mlflow_server/Dockerfile
     disk:
       name: mlflow-data
