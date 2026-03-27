@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mlflow-server
+    dockerfilePath: ./mlflow_server/Dockerfile
+    disk:
+      name: mlflow-data
+      mountPath: /mlruns
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: 8000
