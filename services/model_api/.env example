@@ -1,0 +1,8 @@
+# model_api/.env
+LOCAL_MODEL_PATH=/app/models/model.pkl
+PRODACTION_MODEL_PATH=models:/churn_classifier/Production
+MLFLOW_TRACKING_URI=http://mlflow:5000
+MLFLOW_HOST=mlflow
+MLFLOW_PORT=5000
+API_PORT=8000
+API_HOST=0.0.0.0

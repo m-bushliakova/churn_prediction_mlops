@@ -1,0 +1,5 @@
+# trainer
+API_PORT=8000
+API_HOST=0.0.0.0
+MODEL_API_RELOAD_URL=http://api:8000/reload
+MLFLOW_TRACKING_URI=http://mlflow:5000

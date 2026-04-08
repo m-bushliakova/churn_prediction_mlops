@@ -35,6 +35,10 @@
 
 ### Всё сразу (локально)
 
+
+Отредактируйте созданные .env файлы, подставив свои значения (если нужно). 
+Для локального запуска примеров достаточно.
+
 ```bash
 git clone https://github.com/m-bushliakova/churn_prediction_mlops.git
 cd churn_prediction_mlops

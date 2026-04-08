@@ -1,0 +1,6 @@
+# MLflow .env
+MLFLOW_HOST=0.0.0.0
+MLFLOW_PORT=5000
+MLFLOW_BACKEND_STORE_URI=sqlite:////mlruns/mlflow.db
+MLFLOW_ARTIFACT_ROOT=file:///mlruns
+MLFLOW_TRACKING_URI=http://0.0.0.0:5000
