@@ -161,12 +161,8 @@ def make_experiments():
             mlflow.log_metric("test_f1_weighted", test_f1)
             mlflow.log_param("model_name", best['name'])
     
-    joblib.dump({
-        'pipeline': best['pipeline'],
-        'label_encoder': best['le'],
-        'features_used': X_train.columns.tolist()
-    }, filename=f'{st.model_path}')
-    
+    joblib.dump(best['pipeline'], filename=f'{st.model_path}')
+        
     logging.info(f"Модель сохранена: {st.model_path}")
 
 

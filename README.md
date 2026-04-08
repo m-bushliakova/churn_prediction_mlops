@@ -55,6 +55,8 @@ docker-compose up -d
 
 ![MLflow UI](images/ml_flow.png)
 
+![Запрос к модели развернутой локально ](images/local_api.png)
+
 ### Отдельные сервисы
 
 ```bash
