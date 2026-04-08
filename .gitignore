@@ -8,4 +8,3 @@ data
 services/trainer/models
 services/model_api_render
 .vscode
-images
