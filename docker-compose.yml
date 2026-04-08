@@ -1,0 +1,43 @@
+services:
+  mlflow:
+    build: ./services/mlflow_server
+    ports:
+      - "${MLFLOW_PORT}:${MLFLOW_PORT}"
+    volumes:
+      - ./mlruns:/mlruns
+    env_file:
+      - ./services/mlflow_server/.env
+    networks:
+      - ml-network
+    restart: always
+
+  api:
+    build: ./services/model_api   
+    volumes:
+      - ./models:/app/models
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    env_file:
+      - ./services/model_api/.env
+    depends_on:
+      - mlflow
+    restart: always
+    
+  trainer:
+    build: ./services/trainer  
+    command: python pipeline.py
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./mlruns:/app/mlruns
+    env_file:
+      - ./services/trainer/.env
+    depends_on:
+      - mlflow
+    networks:
+      - ml-network
+    restart: "no"
+
+networks:
+  ml-network:
+    driver: bridge
